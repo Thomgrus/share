@@ -13,5 +13,5 @@ sh -c "$(curl -fsSL https://raw.github.com/Thomgrus/share/main/shell/theme.sh)"
 For debian user, you can fully install the feature with:
 
 ```sh
-sudo sh -c "$(curl -fsSL https://raw.github.com/Thomgrus/share/main/shell/init-debian.sh)"
+sudo sh -c "$(wget -O- https://raw.github.com/Thomgrus/share/main/shell/init-debian.sh)"
 ```

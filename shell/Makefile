@@ -14,7 +14,10 @@
 ##               TEST              ##
 #####################################
 
-test-%: ## Test the script %.sh
+build-integration-%:
+	@docker build -f $*.dockerfile -t $*-integration .
+
+test-%: ## Test the script init-%.sh
 	@echo "Test script init-$*.sh with $* docker image"
 	@docker run --rm -it -e LOCAL=/usr/src/app -v $$PWD:/usr/src/app -w /usr/src/app $* sh init-$*.sh
 
