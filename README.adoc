@@ -1,0 +1,3 @@
+= share
+
+This is a repository with a toolbox goal.
