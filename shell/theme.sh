@@ -31,7 +31,8 @@ fi
 if ! cat $HOME/.zshrc | grep -E '^plugins=.*zsh-syntax-highlighting.*'
 then
     echo "zsh-syntax-highlighting plugin added"
-    cat "$HOME/.zshrc" | sed -E 's/plugins=\((.*)\)/plugins=\(\1 zsh-syntax-highlighting\)/g' > "$HOME/.zshrc"
+    cat "$HOME/.zshrc" | sed -E 's/plugins=\((.*)\)/plugins=\(\1 zsh-syntax-highlighting\)/g' > "$HOME/.zshrc.rpl"
+    mv "$HOME/.zshrc.rpl" "$HOME/.zshrc"
 else
     echo "zsh-syntax-highlighting already added"
 fi;
